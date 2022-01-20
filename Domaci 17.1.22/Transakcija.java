@@ -56,11 +56,10 @@ public class Transakcija {
 			this.racunSaKogSeSalje.menjaTrenutnoStanje(-(vrednostTransakcije + provizija(vrednostTransakcije)));
 			this.racunNaKojiSeSalje.menjaTrenutnoStanje(vrednostTransakcije);
 		}
+		else {
+			System.out.println("Nemate dovoljno sredstava.");
+		}
 	
-	}
-	
-	public Racun getRacun() {
-		return racun;
 	}
 
 	public void setRacun(Racun racun) {
@@ -68,9 +67,11 @@ public class Transakcija {
 	}
 
 	public void stampajTrnsakcija() {
-		System.out.println("id transakcije: " + this.id);
-		this.racun.stampaj();
+		System.out.println("Poslato sa: ");
+		this.racunSaKogSeSalje.stampaj();
+		System.out.println("Poslato na: ");
+		this.racunNaKojiSeSalje.stampaj();
+		
 	}
 }
-
 

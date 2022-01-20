@@ -17,7 +17,6 @@ public class zadatak1 {
 //			Ime i prezime  -  broj racuna
 //			stanje na racunu je (trenutno stanje) rsd.
 //				
-//
 //					Kreirati klasu Transakcija koja ima:
 //			id transakcije
 //			racun sa kog se prenose sredstva
@@ -41,24 +40,17 @@ public class zadatak1 {
 //
 //				Naravno u glavnom kreirati objekte i testirati funkcionalnosti 
 
-		ArrayList<Racun> racuni = new ArrayList<Racun>();
 		
-		Racun milanov = new Racun("1231-3123-4444-555", "Milan Kostadinovic", 10000.00);
-		Racun ivanov = new Racun("1551-3155-774-599", "Ivan Miletic", 15700.00);
-		Racun dusanov = new Racun("1111-22222-774-999", "Dusan Kostadinovic", 25000.00);
-	
-		racuni.add(milanov);
 		
-		racuni.add(ivanov);
+		Racun primalac = new Racun("1231-3123-4444-555", "Milan Kostadinovic", 10000.00);
+		Racun posiljalac = new Racun("1551-3155-774-599", "Ivan Miletic", 15700.00);
 		
-		racuni.add(dusanov);
+		Transakcija transakcija = new Transakcija("1234", posiljalac, primalac);
 		
-		milanov.menjaTrenutnoStanje(5000);
+		transakcija.izvrsiTransakciju(666);
 		
-		for (int i = 0; i < racuni.size(); i ++) {
-			racuni.get(i).stampaj();
-		
+		transakcija.stampajTrnsakcija();
 		}
 	}
 
-}
+
