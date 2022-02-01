@@ -32,7 +32,7 @@ public class Zadatak1 {
 		
 			driver.findElement(By.id("rating-star-" + broj)).click();
 			
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			
 			driver.close();
 				

@@ -40,7 +40,7 @@ public class Zadatak2 {
 						.click();
 			}
 
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 
 			driver.close();
 
